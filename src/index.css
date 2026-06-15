@@ -308,3 +308,22 @@ body {
   cursor: default;
   pointer-events: none;
 }
+
+.sold-out-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #dc2626;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 10;
+  letter-spacing: 0.5px;
+}
+
+.add:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

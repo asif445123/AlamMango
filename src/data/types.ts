@@ -1,4 +1,4 @@
-export interface Product {
+  export interface Product {
   id: string;
   name: string;
   emoji: string;
@@ -7,6 +7,7 @@ export interface Product {
   price10: number;
   price5: number;
   image: string;
+  soldOut?: boolean; // optional
 }
 
 export interface Testimonial {
