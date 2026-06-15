@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+/* ── Variables ────────────────────────────────── */
+:root {
+  --gold: #e8910c;
+  --gold-light: #fbbf24;
+  --gold-dark: #b45309;
+  --ink: #1a1a1a;
+  --ink-soft: #6b7280;
+  --bg: #fffdf7;
+  --bg-card: #ffffff;
+  --radius: 1rem;
+  --shadow-card: 0 4px 24px rgba(0,0,0,.07);
+  --shadow-card-hover: 0 12px 40px rgba(0,0,0,.12);
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Font families ────────────────────────────── */
+.font-serif { font-family: var(--font-serif); }
+.font-sans  { font-family: var(--font-sans); }
+
+/* ── Base ─────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f9fafb; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* ── Layout: .wrap ────────────────────────────── */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ═══════════════════════════════════════════════
+   PRODUCTS SECTION (#mangoes)
+   ═══════════════════════════════════════════════ */
+#mangoes {
+  padding: 5rem 0 6rem;
+  background: linear-gradient(180deg, rgba(255,248,235,.5) 0%, var(--bg) 100%);
+}
+
+/* ── Section heading ─────────────────────────── */
+.sec-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+.sec-head h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+  margin: .6rem 0 .8rem;
+}
+.sec-head p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* Eyebrow label */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(.8); }
+}
+
+/* ── Size tabs ───────────────────────────────── */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-bottom: 2.5rem;
+}
+.tab {
+  padding: .75rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: .9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease;
+  background: #f3f4f6;
+  color: var(--ink-soft);
+  position: relative;
+}
+.tab:hover {
+  background: #e5e7eb;
+  color: var(--ink);
+}
+.tab.active {
+  background: var(--gold);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(232,145,12,.35);
+  transform: scale(1.03);
+}
+
+/* ── Product grid ────────────────────────────── */
+#mangoes .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 680px) {
+  #mangoes .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* ── Product card ────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid #f0ebe3;
+  box-shadow: var(--shadow-card);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Photo header */
+.card .ph {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+/* Real image */
+.card .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.card:hover .card-img {
+  transform: scale(1.08);
+}
+
+/* Gradient overlay on bottom for name readability */
+.card .card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  opacity: .55;
+  mask-image: linear-gradient(to top, rgba(0,0,0,.9) 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,.9) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Variety name on image */
+.card .card-name {
+  position: absolute;
+  bottom: .75rem;
+  left: 1rem;
+  right: 1rem;
+  color: #fff;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,.45);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Legacy fallback (kept for safety) */
+.card .fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
+}
+.card .fallback .em {
+  font-size: 5.5rem;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.15));
+  transition: transform .5s ease;
+  line-height: 1;
+}
+.card:hover .fallback .em {
+  transform: scale(1.12);
+}
+.card .fallback .nm {
+  color: rgba(255,255,255,.92);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+/* Size tag */
+.size-tag {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  padding: .3rem .7rem;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(4px);
+  border-radius: 2rem;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--ink);
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+/* Card body */
+.card .body {
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+.card .body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: .25rem;
+}
+.card .body .desc {
+  font-size: .88rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+/* Price row */
+.card .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.card .price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1;
+}
+.card .price small {
+  font-size: .72rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-left: .15rem;
+}
+
+/* Add button */
+.card .add {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .6rem 1.25rem;
+  background: var(--gold);
+  color: #fff;
+  border: none;
+  border-radius: .75rem;
+  font-size: .85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: 0 3px 12px rgba(232,145,12,.3);
+  white-space: nowrap;
+}
+.card .add:hover {
+  background: var(--gold-dark);
+  box-shadow: 0 6px 20px rgba(232,145,12,.4);
+  transform: translateY(-1px);
+}
+.card .add:active {
+  transform: scale(.96);
+}
+.card .add.added {
+  background: #22c55e;
+  box-shadow: 0 3px 12px rgba(34,197,94,.35);
+  cursor: default;
+  pointer-events: none;
+}
