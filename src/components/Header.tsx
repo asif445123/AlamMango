@@ -14,10 +14,7 @@ export default function Header() {
           <a href="#top" className="flex items-center gap-3 group" aria-label="Alam Mango">
             <img src="/images/logo.png" alt="Alam Mango" className="h-10 sm:h-12 w-auto rounded-lg" />
             <div className="hidden sm:block">
-              <span className="block font-serif text-xl font-bold text-amber-900 group-hover:text-amber-700 transition-colors">
-                Alam Mango
-              </span>
-              <span className="block text-xs text-amber-600 tracking-wide">
+              <span className="block text-xs text-amber-900 tracking-wide">
                 Premium Mangoes · Rahim Yar Khan
               </span>
             </div>
