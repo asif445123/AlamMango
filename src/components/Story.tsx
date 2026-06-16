@@ -13,7 +13,7 @@ export default function Story() {
               />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-amber-500 text-white p-6 rounded-2xl shadow-xl hidden sm:block">
-              <div className="text-3xl font-bold font-serif">30+</div>
+              <div className="text-3xl font-bold font-serif">20+</div>
               <div className="text-sm text-amber-100">Years of Excellence</div>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function Story() {
                 <div className="text-sm text-gray-500">Happy Customers</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-amber-600 font-serif">4</div>
+                <div className="text-2xl font-bold text-amber-600 font-serif">6</div>
                 <div className="text-sm text-gray-500">Premium Varieties</div>
               </div>
             </div>
