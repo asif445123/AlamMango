@@ -17,7 +17,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 leading-relaxed text-sm">
-              Alam Mango — premium, garden-fresh mangoes from Rahim Yar Khan,
+              Alam Mango — Premium Mangoes from Rahim Yar Khan | Buy Chaunsa & Sindhri Online,
               Pakistan's mango capital. Delivered free to your door.
             </p>
           </div>
