@@ -72,6 +72,19 @@ export default function Header() {
             <a href="#mangoes" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-amber-600 py-1">Our Mangoes</a>
             <a href="#why" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-amber-600 py-1">Why Us</a>
             <a href="#story" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-amber-600 py-1">Our Story</a>
+            <a
+      href="#faq"
+      onClick={() => setMenuOpen(false)}
+      className="block text-sm font-medium text-gray-700 hover:text-amber-600 py-1"
+    >
+      FAQ
+    </a>
+            <a
+    href="#faq"
+    className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors"
+  >
+    FAQ
+  </a>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="block text-sm font-medium text-green-600 py-1">WhatsApp Us</a>
           </div>
         )}

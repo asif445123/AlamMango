@@ -6,7 +6,7 @@ import WhyUs from './components/WhyUs';
 import Story from './components/Story';
 import CartDrawer from './components/CartDrawer';
 import Footer from './components/Footer';
-
+import FAQ from './components/FAQ';
 export default function App() {
   return (
     <CartProvider>
@@ -16,6 +16,8 @@ export default function App() {
         <Products />
         <WhyUs />
         <Story />
+        <FAQ />
+
         <Footer />
         <CartDrawer />
       </div>

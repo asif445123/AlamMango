@@ -14,19 +14,19 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-20">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-25">
         <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 backdrop-blur-sm">
           <span className="text-amber-200 text-sm font-medium tracking-wide">🥭 Season Now Accepting Orders</span>
         </div>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-          The Finest Mangoes from{' '}
-          <span className="text-amber-400">Rahim Yar Khan</span>
+          Buy Premium Chaunsa, Sindhri & Anwar Ratol{' '}
+          <span className="text-amber-400">Mangoes Online from Rahim Yar Khan</span>
         </h1>
         <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed">
           Hand-picked from our family orchards, delivered fresh to your doorstep.
           Experience the authentic taste of premium Pakistani mangoes.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 pb-6 justify-center">
           <a
             href="#mangoes"
             className="inline-flex items-center justify-center px-8 py-4 bg-amber-500 hover:bg-white hover:text-amber-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:-translate-y-0.5"
