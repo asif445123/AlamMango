@@ -84,7 +84,7 @@ export default function Products() {
                   <img
                     className="card-img"
                     src={product.image}
-                    alt={product.name}
+alt={`${product.name} mangoes from Rahim Yar Khan Pakistan`}
                     loading="lazy"
                   />
 

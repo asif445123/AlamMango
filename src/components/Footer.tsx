@@ -17,8 +17,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 leading-relaxed text-sm">
-              Alam Mango — Premium Mangoes from Rahim Yar Khan | Buy Chaunsa & Sindhri Online,
-              Pakistan's mango capital. Delivered free to your door.
+             Alam Mango supplies premium Chaunsa, Sindhri, Langra, Dosehri and Anwar Ratol mangoes directly from Rahim Yar Khan, Pakistan. Free delivery available.
             </p>
           </div>
 
