@@ -60,12 +60,12 @@ export default function Footer() {
               </div>
 
               {/* Export Quality */}
-              <div className="flex items-center gap-2 text-sm text-gray-300">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="8" r="7" fill="#FFF9C4" stroke="#F9A825" />
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" fill="#FFD54F" stroke="#F57F17" />
+               <div className="flex items-center gap-1.5 text-xs text-gray-400">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                  <line x1="1" y1="10" x2="23" y2="10" />
                 </svg>
-                Export Quality
+                Cash on Delivery
               </div>
 
               {/* Free Home Delivery */}
