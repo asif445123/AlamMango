@@ -32,6 +32,7 @@ export const products: Product[] = [
     price10: 2500,
     price5: 1500,
     image: '/images/dosehri.jpg',
+    soldOut: true,
   },
   {
     id: 'sindhri',
@@ -42,6 +43,7 @@ export const products: Product[] = [
     price10: 2700,
     price5: 1700,
     image: 'https://images.pexels.com/photos/28939331/pexels-photo-28939331.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200',
+    soldOut: true,
   },
   {
     id: 'chaunsa',
@@ -62,6 +64,7 @@ export const products: Product[] = [
     price10: 3200,
     price5: 2200,
     image: 'https://images.pexels.com/photos/8523870/pexels-photo-8523870.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200',
+    soldOut: true,
   },
 ];
 
